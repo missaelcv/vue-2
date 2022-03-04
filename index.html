@@ -24,6 +24,9 @@
           {{ showPrices ?  '😂': '😎'}}</span>
       </h1>
 
+      <input type="number" v-model="value">
+      <span>{{ convertedValue }}</span>
+
       <ul v-show=showPrices>
         <li class="uppercase"
         v-bind:class="{ orange : p.value == price, red: p.value < price, green : p.value > price}"
