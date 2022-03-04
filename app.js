@@ -32,7 +32,9 @@ new Vue ( {
   },
 
   watch : {
-
+    showPrices(newVal, oldVal){
+      console.log(newVal, oldVal)
+    }
   },
 
     //Deficinion de Metodo
