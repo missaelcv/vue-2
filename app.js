@@ -8,6 +8,7 @@ new Vue ( {
       changePercent: -10,
       
 
+      color : 'f4f4f4',
       price : 8400, 
 
       pricesWithDays: [
@@ -27,6 +28,10 @@ new Vue ( {
   methods: {
     toggleShowPrices () {
       this.showPrices = !this.showPrices
+
+      //sacar el hash
+      this.color = this.color.split('')
+      .reverse().join('')
     }
   }
 })
