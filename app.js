@@ -1,4 +1,11 @@
 Vue.component(' CoinDetail', {
+
+     //se puede Definicir como lo que mandara el componente padre a lo que recibe el componente hijo.
+ 
+
+  props: ['changerPercent', 'title'],    
+
+
     data() {           // es una funcion que devuelve un objeto
       return {
         showPrices : false   //Propiedad 
@@ -11,7 +18,7 @@ Vue.component(' CoinDetail', {
       }
     },
 
-    // Componente 
+    // Nuevo Componente  
   template: `         
   <h1 v-bind:class="changePercent > 0 ? 'green' : 'red' ">  
   {{ title }}
