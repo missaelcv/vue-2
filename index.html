@@ -14,7 +14,9 @@
       v-on:mouseout= "toggleShowPrices" 
       v-bind:src="img" v-bind:alt="name">
 
-      
+      <coin-detail 
+       v-bind:title="title" 
+        v-bind:changerPercent = "changerPercent"></coin-detail>
 
       <input type="number" v-model="value">
       <span>{{ convertedValue }}</span>
