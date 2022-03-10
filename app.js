@@ -1,3 +1,31 @@
+Vue.component(' CoinDetail', {
+    data() {           // es una funcion que devuelve un objeto
+      return {
+        showPrices : false   //Propiedad 
+      }
+    },
+
+    methods : {       //Metodo de ShowPrices 
+      toggleShowPrices() {
+        this.showPrices = !this.showPrices
+      }
+    },
+
+    // Componente 
+  template: `         
+  <h1 v-bind:class="changePercent > 0 ? 'green' : 'red' ">  
+  {{ title }}
+  <span v-if="changePercent > 0">✌</span>
+  <span v-else-if="changePercent < 0">👎</span>
+  <span v-else>👎</span>
+
+  <span v-on:click="toggleShowPrices">
+    {{ showPrices ?  '😂': '😎'}}</span>
+</h1>
+`
+
+})
+
 new Vue ( {
   el: '#app',
   
