@@ -10,13 +10,8 @@
 <body>
     <div id="app" v-bind:style="{background: '#' + color}">
 
-      <coin-detail 
-      v-bind:img="img"
-      v-bind:name="name"
-      v-bind:title="title" 
-      v-bind:prices="price"
-      v-bind:changerPercent = "changerPercent"></coin-detail>
-
+      <coin-detail v-bind:coin="btc" ></coin-detail>
+      </div>
      
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="app.js"></script>
