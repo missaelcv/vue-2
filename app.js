@@ -16,7 +16,8 @@ Vue.component('CoinDetail', {
         this.showPrices = !this.showPrices
 
           //function para emitir el componente
-        this.$emit('change-color')
+        this.$emit('change-color', 
+        this.showPrices ? 'FF96c8' : '3d3d3d')
       }
     },
 
@@ -85,15 +86,15 @@ new Vue ( {
         { day: 'Domingo', value: 10200 }, 
       ],
       },
-      color : 'f4f4f4',
+      color : 'f4f4f4'
     }
   },
 
   //   //Deficinion de Metodo
   methods: {
-    updateColor () {
+    updateColor (color) {
       //sacar el hash
-      this.color = this.color
+      this.color = color || this.color
       .split('')
       .reverse()
       .join('')
