@@ -1,9 +1,8 @@
-Vue.component(' CoinDetail', {
+Vue.component('CoinDetail', {
 
      //se puede Definicir como lo que mandara el componente padre a lo que recibe el componente hijo.
  
   props: ['coin'],    
-
 
     data() {           // es una funcion que devuelve un objeto
       return {
@@ -15,6 +14,9 @@ Vue.component(' CoinDetail', {
     methods : {       //Metodo de ShowPrices 
       toggleShowPrices() {
         this.showPrices = !this.showPrices
+
+          //function para emitir el componente
+        this.$emit('change-color')
       }
     },
 
@@ -88,13 +90,13 @@ new Vue ( {
   },
 
   //   //Deficinion de Metodo
-  // methods: {
-  //   toggleShowPrices () {
-  //     this.showPrices = !this.showPrices
-
-  //     //sacar el hash
-  //     this.color = this.color.split('')
-  //     .reverse().join('')
-  //   }
-  // }
+  methods: {
+    updateColor () {
+      //sacar el hash
+      this.color = this.color
+      .split('')
+      .reverse()
+      .join('')
+    }
+  }
 })
