@@ -20,7 +20,7 @@ Vue.component('CoinDetail', {
         this.showPrices ? 'FF96c8' : '3d3d3d')
       }
     },
-
+//Componente HIjo
     computed: {
       title () {
         return `${this.coin.name} - ${this.coin.symbol}`
@@ -32,6 +32,16 @@ Vue.component('CoinDetail', {
         return this.value / this.coin.price
       }
     },
+
+     //nueva Funcion
+     created() {
+      console.log('Created CoinDetail...')
+    },
+
+    mounted() {
+      console.log('Mounted CoinDetail...')
+    },
+
 
     // Nuevo Componente  
   template: `       
@@ -92,6 +102,15 @@ new Vue ( {
       color : 'f4f4f4'
     }
   },
+
+    //nueva Funcion
+    created() {
+          console.log('Created')
+    },
+
+    mounted() {
+      console.log('Mounted')
+    },
 
   //   //Deficinion de Metodo
   methods: {
